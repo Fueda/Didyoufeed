@@ -3,4 +3,9 @@
     <string name="text1">ペット一覧</string>
     <string name="text2">ペットを追加</string>
     <string name="text3">ペット！！</string>
+
+    <string name="hint_key">company</string>
+    <string name="hint_value">US$price</string>
+    <string name="insert">insert</string>
+    <string name="read">read</string>
 </resources>

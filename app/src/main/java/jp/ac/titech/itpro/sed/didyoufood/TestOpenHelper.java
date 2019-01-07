@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 public class TestOpenHelper extends SQLiteOpenHelper {
 
@@ -38,6 +39,7 @@ public class TestOpenHelper extends SQLiteOpenHelper {
         db.execSQL(
                 SQL_CREATE_ENTRIES
         );
+        Log.d("debug", "onCreate(SQLiteDatabase db)");
     }
 
     @Override
