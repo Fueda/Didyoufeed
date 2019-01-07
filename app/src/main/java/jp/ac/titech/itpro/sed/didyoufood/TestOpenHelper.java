@@ -17,14 +17,26 @@ public class TestOpenHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "TestDB.db";
     private static final String TABLE_NAME = "testdb";
     private static final String _ID = "_id";
-    private static final String COLUMN_NAME_TITLE = "company";
-    private static final String COLUMN_NAME_SUBTITLE = "stockprice";
+    private static final String COLUMN_NAME_TITLE = "amount";
+    private static final String COLUMN_NAME_SUBTITLE1 = "hour";
+    private static final String COLUMN_NAME_SUBTITLE2 = "minute";
+    private static final String COLUMN_NAME_SUBTITLE3 = "year";
+    private static final String COLUMN_NAME_SUBTITLE4 = "month";
+    private static final String COLUMN_NAME_SUBTITLE5 = "day";
+    private static final String COLUMN_NAME_SUBTITLE6 = "person";
+    private static final String COLUMN_NAME_SUBTITLE7 = "pet";
 
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + TABLE_NAME + " (" +
                     _ID + " INTEGER PRIMARY KEY," +
                     COLUMN_NAME_TITLE + " TEXT," +
-                    COLUMN_NAME_SUBTITLE + " INTEGER)";
+                    COLUMN_NAME_SUBTITLE1 + " INTEGER," +
+                    COLUMN_NAME_SUBTITLE2 + " INTEGER," +
+                    COLUMN_NAME_SUBTITLE3 + " INTEGER," +
+                    COLUMN_NAME_SUBTITLE4 + " INTEGER," +
+                    COLUMN_NAME_SUBTITLE5 + " INTEGER," +
+                    COLUMN_NAME_SUBTITLE6 + " TEXT," +
+                    COLUMN_NAME_SUBTITLE7 + " TEXT)";
 
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + TABLE_NAME;

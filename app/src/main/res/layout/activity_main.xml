@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <!-- -->
+    <!--
     <TextView
         android:layout_width="86dp"
         android:layout_height="28dp"
@@ -31,6 +32,7 @@
         android:text="@string/text2"
         tools:layout_editor_absoluteX="138dp"
         tools:layout_editor_absoluteY="25dp" />
+        -->
 
 
     <TextView
@@ -44,7 +46,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginStart="62dp"
         android:layout_marginLeft="62dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="17dp"
         android:layout_marginEnd="239dp"
         android:layout_marginRight="239dp"
         android:text="Date"
@@ -54,9 +56,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/button"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="183dp"
+        android:layout_marginTop="500dp"
         android:layout_marginBottom="0dp"
         android:background="@color/whiteColor"
         android:gravity="bottom"
@@ -69,16 +70,34 @@
     </LinearLayout>
 
     <!-- SQLiteここから -->
+
+    <!-- テキスト「量」 -->
+    <TextView
+        android:layout_width="47dp"
+        android:layout_height="49dp"
+        android:layout_alignBottom="@+id/edit_text_key"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="393dp"
+        android:layout_marginLeft="393dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginBottom="3dp"
+        android:text="@string/amount"
+        android:textSize="32sp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="16dp" />
+    <!-- 入力欄「普通」 -->
     <EditText
         android:id="@+id/edit_text_key"
-        android:layout_width="wrap_content"
+        android:layout_width="81dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="164dp"
-        android:layout_marginLeft="164dp"
-        android:layout_marginTop="205dp"
+        android:layout_marginStart="450dp"
+        android:layout_marginLeft="450dp"
+        android:layout_marginTop="86dp"
         android:autofillHints="@string/hint_key"
         android:background="#fff"
         android:hint="@string/hint_key"
@@ -86,20 +105,24 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/edit_text_value"
+        app:layout_constraintRight_toLeftOf="@+id/edit_text_value1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05" />
 
+    <!-- 入力欄「13」 -->
     <EditText
-        android:id="@+id/edit_text_value"
-        android:layout_width="wrap_content"
+        android:id="@+id/edit_text_value1"
+        android:layout_width="63dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_insert"
-        android:layout_alignStart="@+id/edit_text_key"
-        android:layout_alignLeft="@+id/edit_text_key"
-        android:autofillHints="@string/hint_value"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="87dp"
+        android:autofillHints="@string/hint_hour"
         android:background="#fff"
-        android:hint="@string/hint_value"
+        android:hint="@string/hint_hour"
         android:inputType="numberDecimal"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -108,44 +131,120 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05" />
 
+    <!-- テキスト「時」 -->
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edit_text_key"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginBottom="-3dp"
+        android:layout_toEndOf="@+id/edit_text_value1"
+        android:layout_toRightOf="@+id/edit_text_value1"
+        android:text="@string/hour"
+        android:textSize="32sp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <!-- 入力欄「30」 -->
+    <EditText
+        android:id="@+id/edit_text_value2"
+        android:layout_width="63dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edit_text_key"
+        android:layout_alignLeft="@+id/edit_text_key"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-252dp"
+        android:layout_marginLeft="-252dp"
+        android:layout_marginTop="85dp"
+        android:autofillHints="@string/hint_minute"
+        android:background="#fff"
+        android:hint="@string/hint_minute"
+        android:inputType="numberDecimal"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <!-- テキスト「分」 -->
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edit_text_key"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="-1dp"
+        android:layout_toEndOf="@+id/edit_text_value1"
+        android:layout_toRightOf="@+id/edit_text_value1"
+        android:text="@string/minute"
+        android:textSize="32sp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="16dp" />
+
     <Button
         android:id="@+id/button_insert"
-        android:layout_width="0dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="62dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="140dp"
         android:text="@string/insert"
         android:textSize="20sp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/button_read"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_key" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_key"
+        app:layout_constraintVertical_bias="0.1" />
 
     <Button
         android:id="@+id/button_read"
-        android:layout_width="0dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="@string/read"
-        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="139dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
+        android:layout_toEndOf="@+id/button_insert"
+        android:layout_toRightOf="@+id/button_insert"
+        android:text="@string/read"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.1"
         app:layout_constraintLeft_toRightOf="@+id/button_insert"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_value" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_value1"
+        app:layout_constraintVertical_bias="0.1" />
 
     <TextView
         android:id="@+id/text_view"
-        android:layout_width="250dp"
+        android:layout_width="739dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="215dp"
+        android:text="18時00分: 沢山"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_read"
         app:layout_constraintVertical_bias="0.2" />
+    <!--TextViewを非表示にする
+    android:visibility="gone"
+    -->
+
+
     <!-- SQLiteここまで -->
 
 </RelativeLayout>

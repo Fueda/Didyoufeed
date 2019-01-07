@@ -1,11 +1,15 @@
 <resources>
-    <string name="app_name">Did you feed</string>
+    <string name="app_name">餌やった？</string>
     <string name="text1">ペット一覧</string>
     <string name="text2">ペットを追加</string>
     <string name="text3">ペット！！</string>
 
-    <string name="hint_key">company</string>
-    <string name="hint_value">US$price</string>
-    <string name="insert">insert</string>
+    <string name="amount">量</string>
+    <string name="hint_key">普通</string>
+    <string name="hint_hour">13</string>
+    <string name="hour">時</string>
+    <string name="hint_minute">30</string>
+    <string name="minute">分</string>
+    <string name="insert">記録</string>
     <string name="read">read</string>
 </resources>
