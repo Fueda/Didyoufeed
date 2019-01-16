@@ -34,7 +34,7 @@
         tools:layout_editor_absoluteY="25dp" />
         -->
 
-
+    <!-- 「◯年◯月◯日の記録」 -->
     <TextView
         android:id="@+id/textDate"
         android:layout_width="wrap_content"
@@ -70,44 +70,6 @@
     </LinearLayout>
 
     <!-- SQLiteここから -->
-
-    <!-- テキスト「量」 -->
-    <TextView
-        android:layout_width="47dp"
-        android:layout_height="49dp"
-        android:layout_alignBottom="@+id/edit_text_key"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="393dp"
-        android:layout_marginLeft="393dp"
-        android:layout_marginTop="86dp"
-        android:layout_marginBottom="3dp"
-        android:text="@string/amount"
-        android:textSize="32sp"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="16dp" />
-    <!-- 入力欄「普通」 -->
-    <EditText
-        android:id="@+id/edit_text_key"
-        android:layout_width="81dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="450dp"
-        android:layout_marginLeft="450dp"
-        android:layout_marginTop="86dp"
-        android:autofillHints="@string/hint_key"
-        android:background="#fff"
-        android:hint="@string/hint_key"
-        android:inputType="text"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/edit_text_value1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
 
     <!-- 入力欄「13」 -->
     <EditText
@@ -156,9 +118,9 @@
         android:layout_alignStart="@+id/edit_text_key"
         android:layout_alignLeft="@+id/edit_text_key"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="-252dp"
-        android:layout_marginLeft="-252dp"
-        android:layout_marginTop="85dp"
+        android:layout_marginStart="-213dp"
+        android:layout_marginLeft="-213dp"
+        android:layout_marginTop="87dp"
         android:autofillHints="@string/hint_minute"
         android:background="#fff"
         android:hint="@string/hint_minute"
@@ -174,17 +136,96 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/edit_text_key"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="140dp"
-        android:layout_marginLeft="140dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
         android:layout_marginTop="85dp"
-        android:layout_marginBottom="-1dp"
-        android:layout_toEndOf="@+id/edit_text_value1"
-        android:layout_toRightOf="@+id/edit_text_value1"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/edit_text_value2"
+        android:layout_toRightOf="@+id/edit_text_value2"
         android:text="@string/minute"
         android:textSize="32sp"
         tools:layout_editor_absoluteX="4dp"
         tools:layout_editor_absoluteY="16dp" />
 
+    <!-- テキスト「量」 -->
+    <TextView
+        android:layout_width="47dp"
+        android:layout_height="49dp"
+        android:layout_alignBottom="@+id/edit_text_key"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="356dp"
+        android:layout_marginLeft="356dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/amount"
+        android:textSize="32sp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <!-- 入力欄「普通」 -->
+    <EditText
+        android:id="@+id/edit_text_key"
+        android:layout_width="81dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="397dp"
+        android:layout_marginLeft="397dp"
+        android:layout_marginTop="86dp"
+        android:autofillHints="@string/hint_key"
+        android:background="#fff"
+        android:hint="@string/hint_key"
+        android:inputType="text"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/edit_text_value1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <!-- テキスト「やった人」 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edit_text_key"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="500dp"
+        android:layout_marginLeft="500dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/subject"
+        android:textSize="32sp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <!-- 入力欄「飼い主A」 -->
+    <EditText
+        android:id="@+id/edit_text_person"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="631dp"
+        android:layout_marginLeft="631dp"
+        android:layout_marginTop="88dp"
+        android:autofillHints="@string/hint_person"
+        android:background="#fff"
+        android:hint="@string/hint_person"
+        android:inputType="text"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/edit_text_value1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <!-- 「記録」ボタン -->
     <Button
         android:id="@+id/button_insert"
         android:layout_width="100dp"
@@ -192,17 +233,17 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="62dp"
-        android:layout_marginLeft="62dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginStart="237dp"
+        android:layout_marginLeft="237dp"
+        android:layout_marginTop="135dp"
         android:text="@string/insert"
-        android:textSize="20sp"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/button_read"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_key"
         app:layout_constraintVertical_bias="0.1" />
 
+    <!--
     <Button
         android:id="@+id/button_read"
         android:layout_width="100dp"
@@ -222,7 +263,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_value1"
         app:layout_constraintVertical_bias="0.1" />
+        -->
 
+    <!--記録表示テキスト-->
     <TextView
         android:id="@+id/text_view"
         android:layout_width="739dp"
@@ -238,8 +281,104 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_read"
         app:layout_constraintVertical_bias="0.2" />
+
+    <!--ボタン「現在時刻」-->
+    <Button
+        android:id="@+id/button_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_insert"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="1dp"
+        android:text="現在時刻"
+        android:textSize="32sp" />
+
+    <!--「前日」-->
+    <Button
+        android:id="@+id/button_yesterday"
+        android:layout_width="63dp"
+        android:layout_height="62dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="12dp"
+        android:text="前日"
+        android:textSize="18sp" />
+
+    <!--「翌日」-->
+    <Button
+        android:id="@+id/button_tomorrow"
+        android:layout_width="63dp"
+        android:layout_height="62dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="705dp"
+        android:layout_marginLeft="705dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:text="翌日"
+        android:textSize="18sp" />
+    <!--「今日にジャンプ」-->
+    <Button
+        android:id="@+id/button_today"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="503dp"
+        android:layout_marginLeft="503dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginRight="107dp"
+        android:text="今日にジャンプ"
+        android:textSize="18sp" />
+
+    <!-- やった人選択ラジオボタン -->
+    <RadioGroup
+        android:layout_width="117dp"
+        android:layout_height="122dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="643dp"
+        android:layout_marginLeft="643dp"
+        android:layout_marginTop="141dp"
+        android:id="@+id/RadioGroupSubject">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/person1" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/person2" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/person3" />
+    </RadioGroup>
     <!--TextViewを非表示にする
     android:visibility="gone"
     -->

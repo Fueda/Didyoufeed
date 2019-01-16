@@ -10,6 +10,11 @@
     <string name="hour">時</string>
     <string name="hint_minute">30</string>
     <string name="minute">分</string>
+    <string name="subject">やった人</string>
+    <string name="hint_person">飼い主A</string>
+    <string name="person1">飼い主A</string>
+    <string name="person2">飼い主B</string>
+    <string name="person3">飼い主C</string>
     <string name="insert">記録</string>
     <string name="read">read</string>
 </resources>
